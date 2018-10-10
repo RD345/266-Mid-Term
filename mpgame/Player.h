@@ -558,6 +558,9 @@ public:
 	void					RespawnFlags				( void );
 	void					DropWeapon					( void );
 
+	//qsouls
+	//idEntity*				DropSouls(const char* itemClass, const idDict& customArgs, const idVec3& velocity = vec3_origin) const;
+
 	bool					WeaponIsEnabled				( void ) const { return weaponEnabled; }
 	void					ShowCrosshair				( void );
 	void					HideCrosshair				( void );

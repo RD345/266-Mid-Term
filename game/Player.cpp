@@ -3929,6 +3929,11 @@ void idPlayer::UpdateConditions( void ) {
  	pfl.dead	= ( health <= 0 );
 }
 
+//qsouls
+
+
+//rvWeaponGauntlet::Attack
+
 /*
 ==================
 idPlayer::WeaponFireFeedback
@@ -5830,6 +5835,27 @@ idEntity* idPlayer::DropItem ( const char* itemClass, const idDict& customArgs, 
 	return ent;
 }
 
+/* qsouls
+=================
+idPlayer::DropSouls
+=================
+*/
+/*
+idEntity* idPlayer::DropSouls(const char* itemClass, const idDict& customArgs, const idVec3& velocity) const
+{
+	idDict		args;
+	idEntity*	ent;
+	args.Set("classname", itemClass);
+	args.Set("origin", GetPhysics()->GetAbsBounds().GetCenter().ToString());
+	args.Set("dropped", "1");
+	args.SetFloat("angle", 360.0f * gameLocal.random.RandomFloat());
+	args.Copy(customArgs);
+	gameLocal.SpawnEntityDef(args, &ent);
+	if (!ent) {
+		return NULL;
+	}	
+}
+*/
 /*
 =================
 idPlayer::DropPowerups

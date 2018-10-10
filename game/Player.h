@@ -579,6 +579,9 @@ public:
 	void					RespawnFlags				( void );
 	void					DropWeapon					( void );
 
+	//qsouls
+	//idEntity*				DropSouls(const char* itemClass, const idDict& customArgs, const idVec3& velocity = vec3_origin) const;
+
 // RAVEN BEGIN
 // abahr:
 	bool					WeaponIsEnabled				( void ) const { return weaponEnabled; }
