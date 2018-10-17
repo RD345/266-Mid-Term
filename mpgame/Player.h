@@ -243,6 +243,8 @@ public:
 	int						AmmoIndexForWeaponClass( const char *weapon_classname, int *ammoRequired = NULL );
 	const char *			AmmoClassForWeaponClass( const char *weapon_classname);
 
+	//qsouls
+	void ChangeSouls(int);
 // RAVEN BEGIN
 // mekberg: if the player can pick up the ammo at this time
 	bool					DetermineAmmoAvailability( idPlayer* owner, const char *ammoName, int ammoIndex, int ammoAmount, int ammoMax );

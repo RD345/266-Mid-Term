@@ -198,7 +198,7 @@ public:
 	int						weapons;
 
 	//qsouls
-	int souls;
+	int souls = 0;
 
 
 // RITUAL BEGIN
@@ -627,6 +627,15 @@ public:
 	bool					CanBuy( void );
 	int						CanSelectWeapon				( const char* weaponName );
 	int						GetItemCost(const char* itemName);
+
+
+
+	//qsouls
+	void AddSouls(int);
+	//qsouls end
+
+	 
+
 // RITUAL END
 	void					PerformImpulse( int impulse );
 	void					Spectate( bool spectate, bool force = false );

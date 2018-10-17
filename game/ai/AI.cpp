@@ -1627,6 +1627,17 @@ void idAI::Killed( idEntity *inflictor, idEntity *attacker, int damage, const id
 
 	aifl.dead = true;
 
+	//qsouls When entity is killed, give the player souls
+	/*
+	idPlayer  *qplayer = gameLocal.GetLocalPlayer();
+	qplayer->AddSouls(100);
+
+
+	*/
+	//attacker->GetClass.;
+
+	//qsouls end
+
 	// turn off my flashlight, if I had one
 	ProcessEvent( &AI_Flashlight, false );
 

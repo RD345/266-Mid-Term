@@ -3414,7 +3414,7 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 		_hud->SetStateInt("player_armor", inventory.souls);
 		_hud->HandleNamedEvent("updateSouls");
 	}
-	
+	//qsouls end
 	
 	// Boss bar
 	if ( _hud->State().GetInt ( "boss_health", "-1" ) != (bossEnemy ? bossEnemy->health : -1) ) {
@@ -3933,6 +3933,8 @@ void idPlayer::UpdateConditions( void ) {
 
 
 //rvWeaponGauntlet::Attack
+
+//qsouls end
 
 /*
 ==================
@@ -14112,3 +14114,12 @@ int idPlayer::CanSelectWeapon(const char* weaponName)
 }
 
 // RITUAL END
+
+
+//qsouls adds specified amount of souls to the player
+/*
+void idPlayer::AddSouls(int add)
+{
+	souls += add;
+}
+*/
