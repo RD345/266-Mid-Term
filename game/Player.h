@@ -630,7 +630,7 @@ public:
 
 
 
-	//qsouls
+	//qsouls *builds
 	void AddSouls(int);
 	//qsouls end
 
