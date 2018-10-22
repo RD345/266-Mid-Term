@@ -14117,9 +14117,8 @@ int idPlayer::CanSelectWeapon(const char* weaponName)
 
 
 //qsouls adds specified amount of souls to the player
-/*
+
 void idPlayer::AddSouls(int add)
 {
-	souls += add;
+	inventory.souls += add;
 }
-*/
