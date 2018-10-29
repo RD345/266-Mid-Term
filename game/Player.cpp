@@ -3396,7 +3396,9 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 		_hud->SetStateFloat	( "player_healthpct", idMath::ClampFloat ( 0.0f, 1.0f, (float)health / (float)inventory.maxHealth ) );
 		_hud->HandleNamedEvent ( "updateHealth" );
 	}
-		
+	
+
+	/*
 	temp = _hud->State().GetInt ( "player_armor", "-1" );
 	if ( temp != inventory.armor ) {
 		_hud->SetStateInt ( "player_armorDelta", temp == -1 ? 0 : (temp - inventory.armor) );
@@ -3404,9 +3406,21 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 		_hud->SetStateFloat	( "player_armorpct", idMath::ClampFloat ( 0.0f, 1.0f, (float)inventory.armor / (float)inventory.maxarmor ) );
 		_hud->HandleNamedEvent ( "updateArmor" );
 	}
+	*/
 
 	//QSouls
 	
+	temp = _hud->State().GetInt("player_armor", "-1");
+	if (temp != inventory.souls) {
+		_hud->SetStateInt("player_armorDelta", temp == -1 ? 0 : (temp - inventory.souls));
+		_hud->SetStateInt("player_armor", inventory.souls);
+		_hud->SetStateFloat("player_armorpct", idMath::ClampFloat(0.0f, 1.0f, (float)inventory.souls / (2*(float)inventory.souls)) );
+		_hud->HandleNamedEvent("updateArmor");
+	}
+
+
+
+	/*
 	temp = _hud->State().GetInt("player_souls", "-1");
 	if (temp != inventory.souls)
 	{
@@ -3414,6 +3428,7 @@ void idPlayer::UpdateHudStats( idUserInterface *_hud ) {
 		_hud->SetStateInt("player_armor", inventory.souls);
 		_hud->HandleNamedEvent("updateSouls");
 	}
+	*/
 	//qsouls end
 	
 	// Boss bar

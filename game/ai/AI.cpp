@@ -1630,11 +1630,7 @@ void idAI::Killed( idEntity *inflictor, idEntity *attacker, int damage, const id
 	//qsouls When entity is killed, give the player souls
 	
 	idPlayer  *qplayer = gameLocal.GetLocalPlayer();
-	qplayer->AddSouls(100);
-
-
-	
-	//attacker->GetClass.;
+	qplayer->AddSouls(10);
 
 	//qsouls end
 
