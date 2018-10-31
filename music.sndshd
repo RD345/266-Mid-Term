@@ -2,18 +2,18 @@
 
 sound main_menu
 {
-	minDistance	39
+	minDistance	393
 	maxDistance	393
-	volumeDb	0
+	volumeDb	1
 	no_shakes
 	soundClass	3
 
-	sound/ambience/musical/main_menu.wav
+	sound/MenuTheme
 }
 
 sound main_menu_gameplay
 {
-	minDistance	39
+	minDistance	393
 	maxDistance	393
 	volumeDb	0
 	looping
