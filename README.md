@@ -6,20 +6,15 @@ The objectives are as follows:
 
 Three main points:
 
- 	 -Enemy deaths give souls
-
- 	 -When player dies, a bloodstain is left with souls (only one at any given time)
-
+ 	-Enemy deaths give souls
+ 	-When player dies, a bloodstain is left with souls (only one at any given time)
   	-Add a universal melee
 
 Additionally, common deliverables are as follows:
 
- 	 -Separate Project Folder
-	
- 	 -A README file describing how to play your mod
-	
- 	 -A shortcut that automatically launches your mod
-	
+ 	-Separate Project Folder
+ 	-A README file describing how to play your mod
+ 	-A shortcut that automatically launches your mod
   	-User Interface updates to reflect the changes made to the game
 
 How to play:
