@@ -632,6 +632,8 @@ public:
 
 	//qsouls *builds
 	void AddSouls(int);
+	void Melee(void);
+	void DropSouls();
 	//qsouls end
 
 	 

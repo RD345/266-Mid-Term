@@ -18,6 +18,11 @@
 #include "Healing_Station.h"
 #include "ai/AI_Medic.h"
 
+//qsouls
+//MeleeWeapon = rvWeapon::rvWeaponGauntlet;
+//#include "WeaponGauntlet.cpp"
+//qsouls end
+
 // RAVEN BEGIN
 // nrausch: support for turning the weapon change ui on and off
 #ifdef _XENON
@@ -9799,6 +9804,9 @@ void idPlayer::Killed( idEntity *inflictor, idEntity *attacker, int damage, cons
 		pfl.pain = true;
 		return;
 	}
+//qsouls
+	DropSouls();
+//qsouls end
 
 // squirrel: Mode-agnostic buymenus
 	if ( gameLocal.isMultiplayer ) {
@@ -14142,6 +14150,34 @@ void idPlayer::AddSouls(int add)
 {
 	inventory.souls += add;
 	StartSound ( "snd_powerup_wearoff", SND_CHANNEL_POWERUP, 0, false, NULL );
+	DropSouls();
 
 	//StartSound("snd_gain_souls", SND_CHANNEL_VOICE, 0, false, NULL);
 }
+
+/*
+=====================
+idAI::AttackMelee
+
+jointname allows the endpoint to be exactly specified in the model,
+as for the commando tentacle.  If not specified, it will be set to
+the facing direction + combat.meleeRange.
+
+kickDir is specified in the monster's coordinate system, and gives the direction
+that the view kick and knockback should go
+=====================
+*/
+
+/*
+void idPlayer::Melee(void) {
+
+MeleeWeapon::Attack();
+} */
+
+void idPlayer::DropSouls()
+{
+	spawnArgs.Set("def_dropsItem1", "item_health_small");
+	//DropItem();
+
+}
+
