@@ -7826,6 +7826,11 @@ void idPlayer::UpdateViewAngles( void ) {
 			viewAngles.roll = 40.0f;
 			viewAngles.pitch = -15.0f;
 		}
+
+		// QSouls
+		StartSound("snd_you_died", SND_CHANNEL_VOICE, 0, false, NULL);
+		StartSound("snd_you_died", SND_CHANNEL_ANY, 0, false, NULL);
+		//Qsouls
 		return;
 	}
 
@@ -14136,4 +14141,7 @@ int idPlayer::CanSelectWeapon(const char* weaponName)
 void idPlayer::AddSouls(int add)
 {
 	inventory.souls += add;
+	StartSound ( "snd_powerup_wearoff", SND_CHANNEL_POWERUP, 0, false, NULL );
+
+	//StartSound("snd_gain_souls", SND_CHANNEL_VOICE, 0, false, NULL);
 }
