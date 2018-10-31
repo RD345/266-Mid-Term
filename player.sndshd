@@ -1,3 +1,12 @@
+sound snd_gain_souls
+{
+	minDistance	393
+	maxDistance	393
+	volumeDb	2
+	
+	sound/GainSouls
+	shakeData 0 cpupooiedcepnmndcedcbaaaa
+}
 
 
 sound null
@@ -39,9 +48,9 @@ sound player_sounds_death
 	maxDistance	393
 	volumeDb	2
 
-	sound/mp/player/marine/die1
+	sound/Death
 	shakeData 0 cpupooiedcepnmndcedcbaaaa
-	sound/mp/player/marine/die2
+	sound/Death
 	shakeData 1 fmtusonljjigfcccbbaaaaa
 }
 
@@ -461,7 +470,7 @@ sound player_sounds_powerup_wearoff
 	maxDistance	1181
 	volumeDb	0
 
-	sound/mp/pickups/wearoff
+	sound/GainSouls
 	shakeData 0 grxuvttruustuvsvtpqpomkjihgfdba
 }
 
