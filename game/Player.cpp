@@ -21,6 +21,7 @@
 //qsouls
 //MeleeWeapon = rvWeapon::rvWeaponGauntlet;
 //#include "WeaponGauntlet.cpp"
+#include "gamesys\SysCmds.h"
 //qsouls end
 
 // RAVEN BEGIN
@@ -14151,8 +14152,6 @@ void idPlayer::AddSouls(int add)
 	inventory.souls += add;
 	StartSound ( "snd_powerup_wearoff", SND_CHANNEL_POWERUP, 0, false, NULL );
 	DropSouls();
-
-	//StartSound("snd_gain_souls", SND_CHANNEL_VOICE, 0, false, NULL);
 }
 
 /*
@@ -14176,8 +14175,9 @@ MeleeWeapon::Attack();
 
 void idPlayer::DropSouls()
 {
+	//Cmd_Spawn_f("def_dropsItem1", "item_health_small");
+
 	spawnArgs.Set("def_dropsItem1", "item_health_small");
 	//DropItem();
-
 }
 
